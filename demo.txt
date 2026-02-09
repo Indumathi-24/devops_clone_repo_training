@@ -1,2 +1,2 @@
-In github platform, create a public repo, with readme file enabled and add new file from the github platform, then clone this code to local, that can be done using HTTPS,SSH., 
+In github platform, create a public repo, with readme file enabled and add new file from the github platform, then clone this code to local, that can be done using HTTPS,SSH and GitHub cli. 
 from local modify the file created from the platform and commit and push the file and check is it visible in github platform.
