@@ -2,3 +2,4 @@ In github platform, create a public repo, with readme file enabled and add new f
 from local modify the file created from the platform and commit and push the file and check is it visible in github platform.
 Try to pull from remote.
 Pulled
+vs check 1
