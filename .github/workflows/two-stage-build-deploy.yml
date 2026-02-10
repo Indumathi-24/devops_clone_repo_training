@@ -58,7 +58,7 @@ jobs:
 
   deploytouat:
     runs-on: ubuntu-latest
-    needs: build-and-test      
+    needs: deploytodev     
     name: Deploy to ${{inputs.environment}} environment
     environment: uat
     
@@ -72,7 +72,7 @@ jobs:
 
   deploytoprod:
     runs-on: ubuntu-latest
-    needs: build-and-test 
+    needs: deploytouat
     name: Deploy to ${{inputs.environment}} environment
     environment: prod
     
