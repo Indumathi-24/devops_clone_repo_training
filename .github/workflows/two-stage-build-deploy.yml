@@ -21,10 +21,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: checkout from repo1
+      uses: actions/checkout@v3
 
     - name: Checkout file from another repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
       with: 
         repository: Indumathi-24/devopstraining
         # token: ${{ secrets.GITHUB_TOKEN }}
