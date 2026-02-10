@@ -72,7 +72,7 @@ jobs:
 
   deploytoprod:
     runs-on: ubuntu-latest
-    needs: bbuild-and-test 
+    needs: build-and-test 
     name: Deploy to ${{inputs.environment}} environment
     environment: prod
     
