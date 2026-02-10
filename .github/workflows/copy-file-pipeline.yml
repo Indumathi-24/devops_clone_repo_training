@@ -26,11 +26,18 @@ jobs:
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      # create a folder named folder1, go to folder1 and create the file named file1.txt with content "This is file1"
+      - name: Create folder and file
+        run: |
+          mkdir folder1
+          cd folder1
+          echo "This is file1" > file1.txt
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      # create a folder named folder2, go to folder2 and copy the file named file1.txt from folder1 to folder2
+      - name: Create folder2
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          mkdir folder2
+      - name: move file1.txt to folder2
+        run: |
+          cp folder1/file1.txt folder2/file1.txt    
