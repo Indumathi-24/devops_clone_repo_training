@@ -38,17 +38,17 @@ jobs:
         run: |
           mkdir file-content-from-user
           cd file-content-from-user
-          echo "${{ github.event.inputs.content }}" > ${{ github.event.inputs.filename }}
+          echo "${{ inputs.content }}" > ${{ inputs.filename }}
         shell: bash  
 
       - name: Verify file creation (optional)
         run: |
-          echo "Created file: ${{ github.event.inputs.filename }}"
-          cat ${{ github.event.inputs.filename }}  
+          echo "Created file: ${{ inputs.filename }}"
+          cat ${{ inputs.filename }}  
       
       - name : Upload build artifact the name should be the file name which is created in the above step and the path should be the path of the file which is created in the above step
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ github.event.inputs.filename }}       
-          path: file-content-from-user/${{ github.event.inputs.filename }}
+          name: ${{ inputs.filename }}       
+          path: file-content-from-user/${{ inputs.filename }}
           retention-days: 7
