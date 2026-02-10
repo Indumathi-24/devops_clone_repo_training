@@ -26,7 +26,7 @@ jobs:
     - name: Checkout file from another repository
       uses: actions/checkout@v4
       with: 
-        repository: https://github.com/Indumathi-24/devopstraining
+        repository: Indumathi-24/devopstraining
         # token: ${{ secrets.GITHUB_TOKEN }}
     
     - name: Set up JDK 17
