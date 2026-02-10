@@ -36,15 +36,12 @@ jobs:
 
       - name: create folder named file-content-from-user and create file with the content by getting from the user as input and write the content to the file,only for the file name keep the condition as set the file name as the input from the user if the total characters are less than 10, keep that else keep default file name as content.txt 
         run: |
-          mkdir file-content-from-user
-          cd file-content-from-user
-          echo "${{ inputs.content }}" > ${{ inputs.filename }}
+          mkdir file-content-from-user && cd file-content-from-user && echo "${{ inputs.content }}" > ${{ inputs.filename }}
         shell: bash  
 
       - name: Verify file creation (optional)
         run: |
-          echo "Created file: ${{ inputs.filename }}"
-          cat ${{ inputs.filename }}  
+          echo "Created file: ${{ inputs.filename }}" && cat ${{ inputs.filename }}  
       
       - name : Upload build artifact the name should be the file name which is created in the above step and the path should be the path of the file which is created in the above step
         uses: actions/upload-artifact@v4
